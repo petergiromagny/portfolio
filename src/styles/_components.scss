@@ -1,0 +1,19 @@
+.button {
+  @include button-text;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: $red;
+  transition: all 0.15s linear;
+
+  &:hover {
+    box-shadow: 0 1px 2px $shadow, 0 2px 4px $shadow, 0 4px 8px $shadow,
+      0 8px 16px $shadow, 0 16px 32px $shadow, 0 32px 64px $shadow;
+    transform: translateY(-1px);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
