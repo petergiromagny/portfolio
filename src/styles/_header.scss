@@ -1,0 +1,9 @@
+.navbar__container {
+  justify-content: flex-end;
+  display: grid;
+  padding: 1.5rem 0;
+  .navbar__link {
+    @include link;
+    margin-right: 2rem;
+  }
+}
