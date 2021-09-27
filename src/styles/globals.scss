@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&family=Poppins:wght@300;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;600;700;800&display=swap");
 
 /* MIXIN */
 @mixin link {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: $text;
@@ -12,41 +12,41 @@
   }
 }
 @mixin button-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: $white;
   font-weight: 600;
   font-size: 16px;
 }
 @mixin title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 59px;
   color: $title;
 }
 @mixin subtitle {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 150%;
   color: $title;
 }
 @mixin lg-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 72px;
   line-height: 150%;
   color: $title;
 }
 @mixin md-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 150%;
   color: $title;
 }
 @mixin sm-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 33px;
@@ -54,9 +54,10 @@
 }
 
 /* IMPORT FILE*/
-@import './colors';
-@import './components';
-@import './header';
+@import "./colors";
+@import "./components";
+@import "./header";
+@import "./launchSection";
 
 /* GLOBAL */
 * {
@@ -67,23 +68,28 @@ body {
   padding: 0;
   margin: 0;
 }
+p {
+  @include sm-text;
+  margin: 10px 0;
+}
 a {
   color: inherit;
   text-decoration: none;
 }
-
+.emoji {
+  font-size: 60px;
+}
 .container {
-  max-width: 1440px;
+  max-width: 1280px;
   margin: auto;
 }
 .page__container {
   background-color: $grey;
 }
-
-.title {
-  @include title;
+.row__flex {
+  display: flex;
+  justify-content: space-between;
 }
-
-.text {
-  @include sm-text;
+.col__2 {
+  width: 45%;
 }
