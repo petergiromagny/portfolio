@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
-import type { NextPage } from 'next';
+import React, { useEffect } from "react";
+import type { NextPage } from "next";
 // Import layouts
-import Header from 'components/layouts/Header';
-import Body from 'components/layouts/Body';
-import Navbar from 'components/layouts/Navbar';
+import Header from "components/layouts/Header";
+import Body from "components/layouts/Body";
+import Navbar from "components/layouts/Navbar";
+// Import sections
+import Launch from "components/sections/Launch";
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +13,7 @@ const Home: NextPage = () => {
       <Header />
       <Body>
         <Navbar />
+        <Launch />
       </Body>
     </div>
   );
