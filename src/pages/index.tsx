@@ -6,6 +6,7 @@ import Body from "components/layouts/Body";
 import Navbar from "components/layouts/Navbar";
 // Import sections
 import Launch from "components/sections/Launch";
+import Experience from "components/sections/Experience";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Body>
         <Navbar />
         <Launch />
+        <Experience />
       </Body>
     </div>
   );
