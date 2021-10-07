@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from "react";
 
 interface Props {
   text: string;
 }
 
-const Index = ({ text }: Props) => {
+const Index: FC<Props> = ({ text }) => {
   return <button className='button'>{text}</button>;
 };
 
