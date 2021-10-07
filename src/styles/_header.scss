@@ -2,8 +2,18 @@
   justify-content: flex-end;
   display: grid;
   padding: 1.5rem 0;
+
   .navbar__link {
     @include link;
     margin-right: 2rem;
+  }
+
+  &--footer {
+    justify-content: center;
+
+    .navbar__link {
+      @include link;
+      margin: 0 1rem;
+    }
   }
 }
