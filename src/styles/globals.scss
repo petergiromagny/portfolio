@@ -27,29 +27,26 @@
 @mixin subtitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 150%;
+  font-size: 30px;
   color: $title;
 }
 @mixin lg-text {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 72px;
-  line-height: 150%;
   color: $title;
 }
 @mixin md-text {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 150%;
+  font-size: 20px;
   color: $title;
 }
 @mixin sm-text {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 33px;
+  line-height: 25px;
   color: $text;
 }
 
@@ -58,18 +55,34 @@
 @import "./components";
 @import "./header";
 @import "./launchSection";
+@import "./experienceSection";
 
 /* GLOBAL */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 html,
 body {
   padding: 0;
   margin: 0;
 }
+h1,
+h2 {
+  @include title;
+  margin: 0 0 0 10px;
+}
+h3 {
+  @include subtitle;
+  margin: 0.5rem 0 5px 0;
+}
+h4 {
+  @include md-text;
+  margin: 10px 0;
+}
 p {
   @include sm-text;
+  text-align: justify;
   margin: 10px 0;
 }
 a {
