@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Feu Official",
+    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
+    "image": "feuofficial.svg",
+    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+  },
+  {
+    "id": 2,
+    "name": "LP Car",
+    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
+    "image": "lpcar.svg",
+    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+  }
+]
