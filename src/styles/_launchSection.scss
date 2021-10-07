@@ -11,18 +11,13 @@
 }
 
 #launch__content {
-  padding: 2rem 0 5rem 0;
+  padding: 5rem 0 9rem 0;
 
   .launch__col--left {
     .text__header {
       display: flex;
       justify-content: flex-start;
       align-items: baseline;
-
-      h1 {
-        @include title;
-        margin: 0 0 0 10px;
-      }
     }
 
     .text__body {
