@@ -1,0 +1,25 @@
+#skills__content {
+  padding: 3rem 0 6rem 0;
+
+  .skills__header {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 2rem;
+  }
+  .skills__body {
+    .skills__col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-last-child(n + 2) {
+        margin-bottom: 3rem;
+      }
+
+      & > div {
+        margin: 0 2rem !important;
+      }
+    }
+  }
+}
