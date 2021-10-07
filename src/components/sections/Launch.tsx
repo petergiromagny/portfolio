@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 // Import components
 import Button from "components/elements/Button";
 
-const Index = () => {
+const Index: FC = () => {
   return (
     <div id='launch__content'>
       <div className='row__flex container'>
