@@ -23,16 +23,7 @@
   background-color: $red;
   transition: all 0.15s linear;
 
-  &:hover {
-    box-shadow: 0 1px 2px $shadow, 0 2px 4px $shadow, 0 4px 8px $shadow,
-      0 8px 16px $shadow, 0 16px 32px $shadow, 0 32px 64px $shadow;
-    transform: translateY(-1px);
-    cursor: pointer;
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
+  @include button-action;
 }
 
 .experience__card {
@@ -66,5 +57,53 @@
 
   .card__text {
     max-width: 90%;
+  }
+}
+
+.project__card {
+  background-color: $grey;
+  border-radius: 10px;
+  width: 40%;
+  max-height: 550px;
+  min-height: 550px;
+  padding: 30px 20px 10px 20px;
+  transition: all 0.15s linear;
+
+  @include button-action;
+
+  &--more {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 60px;
+
+    &:hover {
+      box-shadow: none;
+      transform: translateY(0);
+      cursor: default;
+    }
+    span {
+      @include lg-text;
+      width: 80%;
+    }
+    button {
+      width: 30%;
+    }
+  }
+
+  .card__header {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .card__body {
+    .text {
+      width: 400px;
+      margin: auto;
+    }
+    .preview {
+      display: grid;
+      margin-top: 2.5rem;
+    }
   }
 }
