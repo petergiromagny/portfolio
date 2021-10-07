@@ -49,6 +49,35 @@
   line-height: 25px;
   color: $text;
 }
+@mixin button-action {
+  &:hover {
+    box-shadow: 0px 10px 10px 0px $shadow;
+    transform: translateY(-1px);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px 0 $shadow;
+  }
+}
+
+@keyframes openToTop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes closeToTop {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 /* IMPORT FILE*/
 @import "./colors";
@@ -56,7 +85,9 @@
 @import "./header";
 @import "./launchSection";
 @import "./experienceSection";
-@import "./skillsSection";
+@import "./skillSection";
+@import "./projectSection";
+@import "./footer";
 
 /* GLOBAL */
 * {
@@ -99,6 +130,26 @@ a {
 }
 .page__container {
   background-color: $grey;
+  position: relative;
+
+  .scroll__content {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--on {
+      animation: openToTop linear 0.4s;
+    }
+    &--off {
+      bottom: -100px;
+      animation: closeToTop linear 0.2s;
+    }
+  }
 }
 .row__flex {
   display: flex;
@@ -109,4 +160,9 @@ a {
 }
 .col__3 {
   width: calc((100% / 3) - 10px);
+}
+.section__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
