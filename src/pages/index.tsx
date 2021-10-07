@@ -7,6 +7,7 @@ import Navbar from "components/layouts/Navbar";
 // Import sections
 import Launch from "components/sections/Launch";
 import Experience from "components/sections/Experience";
+import Skills from "components/sections/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Launch />
         <Experience />
+        <Skills />
       </Body>
     </div>
   );
