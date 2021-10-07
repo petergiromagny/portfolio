@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const Index: FC = () => {
   return (
-    <div id='skills__content'>
+    <div id='skill'>
       <div className='container'>
-        <div className='skills__header'>
+        <div className='section__header'>
           <span className='emoji'>💎</span>
           <h2>Top Skills</h2>
         </div>
-        <div className='skills__body'>
-          <div className='skills__col'>
+        <div className='skill__body'>
+          <div className='skill__col'>
             <Image
               src='/svg/skills/react.svg'
               alt='React and React Native'
@@ -54,7 +54,7 @@ const Index: FC = () => {
               height={75}
             />
           </div>
-          <div className='skills__col'>
+          <div className='skill__col'>
             <Image
               src='/svg/skills/nodejs.svg'
               alt='NodeJS'
@@ -93,7 +93,7 @@ const Index: FC = () => {
             />
             <Image src='/svg/skills/git.svg' alt='Git' width={75} height={75} />
           </div>
-          <div className='skills__col'>
+          <div className='skill__col'>
             <Image
               src='/svg/skills/mongodb.svg'
               alt='MongoDB'

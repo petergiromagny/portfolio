@@ -7,7 +7,7 @@ import education from "data/education.json";
 
 const Index: FC = () => {
   return (
-    <div id='experience__content'>
+    <div id='experience'>
       <div className='container row__flex'>
         <div className='col__2 experience__col'>
           <div className='experience__header'>
