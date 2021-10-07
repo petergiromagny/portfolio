@@ -1,3 +1,20 @@
+@keyframes arrow__on {
+  from {
+    filter: invert(0) sepia(0) saturate(0) hue-rotate(0);
+  }
+  to {
+    filter: invert(25%) sepia(100%) saturate(1000%) hue-rotate(330deg);
+  }
+}
+@keyframes arrow__off {
+  from {
+    filter: invert(25%) sepia(100%) saturate(1000%) hue-rotate(330deg);
+  }
+  to {
+    filter: invert(0) sepia(0) saturate(0) hue-rotate(0);
+  }
+}
+
 .button {
   @include button-text;
   padding: 10px;
@@ -15,5 +32,39 @@
 
   &:active {
     transform: translateY(0);
+  }
+}
+
+.experience__card {
+  .card__title {
+    h3 {
+      margin: 0;
+    }
+    a {
+      @include md-text;
+      display: flex;
+      align-items: baseline;
+
+      span {
+        margin: 0 0 0 15px;
+      }
+
+      &:hover {
+        .arrow__image {
+          animation: arrow__on ease-in 0.2s;
+          filter: invert(25%) sepia(100%) saturate(1000%) hue-rotate(330deg);
+        }
+      }
+
+      .arrow__image {
+        margin-left: 5px;
+        animation: arrow__off ease-out 0.2s;
+        filter: invert(0) sepia(0) saturate(0) hue-rotate(0);
+      }
+    }
+  }
+
+  .card__text {
+    max-width: 90%;
   }
 }
