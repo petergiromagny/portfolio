@@ -3,12 +3,16 @@ import Image from "next/image";
 // Import components
 import Button from "components/elements/Button";
 
-const Index: FC = () => {
+interface Props {
+  setIsLoading: (isLoading: boolean) => void;
+}
+
+const Index: FC<Props> = ({ setIsLoading }) => {
   return (
     <div id='launch__content'>
       <div className='row__flex container'>
         <div className='col__2 launch__col--left'>
-          <div className='text__header'>
+          <div className='section__header'>
             <span className='emoji'>🙋‍♂️</span>
             <h1>Hello, I&apos;m Peter</h1>
           </div>
@@ -50,6 +54,7 @@ const Index: FC = () => {
               alt='triangle shape'
               width={200}
               height={200}
+              onLoadingComplete={() => setIsLoading(false)}
             />
           </div>
           <div className='avatar__shape avatar__shape--half-donut'>
