@@ -3,11 +3,39 @@
     "id": 1,
     "name": "Feu Official",
     "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "feuofficial.svg",
+    "image": "lpcar.svg",
     "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
   },
   {
     "id": 2,
+    "name": "LP Car",
+    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
+    "image": "lpcar.svg",
+    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+  },
+  {
+    "id": 3,
+    "name": "Feu Official",
+    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
+    "image": "lpcar.svg",
+    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+  },
+  {
+    "id": 4,
+    "name": "LP Car",
+    "intro": "Cutland is a personnal project I created collaborating with a friend, a website selling bracelets. This is e-commerce website made with Wordpress.",
+    "image": "lpcar.svg",
+    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+  },
+  {
+    "id": 5,
+    "name": "Feu Official",
+    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
+    "image": "lpcar.svg",
+    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+  },
+  {
+    "id": 6,
     "name": "LP Car",
     "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
     "image": "lpcar.svg",
