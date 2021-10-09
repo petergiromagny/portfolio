@@ -79,6 +79,15 @@
   }
 }
 
+@keyframes openPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* IMPORT FILE*/
 @import "./colors";
 @import "./components";
@@ -87,12 +96,16 @@
 @import "./experienceSection";
 @import "./skillSection";
 @import "./projectSection";
+@import "./projectScreen";
 @import "./footer";
 
 /* GLOBAL */
+::selection {
+  background-color: rgba($black, 0.6);
+  color: $grey;
+}
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 html,
 body {
@@ -129,8 +142,13 @@ a {
   margin: auto;
 }
 .page__container {
+  animation: openPage linear 0.4s;
   background-color: $grey;
   position: relative;
+
+  .home__content {
+    animation: openPage linear 0.4s;
+  }
 
   .scroll__content {
     position: fixed;
@@ -163,6 +181,8 @@ a {
 }
 .section__header {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+.button__back {
+  @include link;
 }

@@ -1,0 +1,31 @@
+#project__content {
+  animation: openPage linear 0.4s;
+  position: relative;
+  padding-bottom: 5rem;
+  background-color: $white;
+
+  .back__home {
+    position: absolute;
+    width: 100%;
+    transform: translateX(-50%);
+    top: 30px;
+    left: 50%;
+  }
+
+  .project__header {
+    background-color: $grey;
+    justify-content: center;
+    padding: 5.5rem 0 5rem 0;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  .project__info {
+    .project__tags {
+      display: flex;
+    }
+  }
+}
