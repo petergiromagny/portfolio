@@ -1,10 +1,8 @@
 #experience {
   background-color: $white;
   padding: 3rem 0;
-  .experience__header,
-  .education__header {
-    display: flex;
-    align-items: baseline;
+  .section__header {
+    justify-content: flex-start;
     margin-bottom: 2rem;
   }
   .experience__col {

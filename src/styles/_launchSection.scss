@@ -14,10 +14,9 @@
   padding: 5rem 0 9rem 0;
 
   .launch__col--left {
-    .text__header {
-      display: flex;
+    .section__header {
       justify-content: flex-start;
-      align-items: baseline;
+      margin-bottom: 1rem;
     }
 
     .text__body {
