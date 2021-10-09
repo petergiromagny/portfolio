@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 // Import components
-import Button from "components/elements/Button";
 import Navbar from "./Navbar";
 
 const Index: FC = () => {
