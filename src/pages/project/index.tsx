@@ -25,6 +25,7 @@ const Index = () => {
             <ProjectCard
               isHorizontal
               key={item.id}
+              id={item.id}
               tags={item.tags}
               name={item.name}
               intro={item.intro}
