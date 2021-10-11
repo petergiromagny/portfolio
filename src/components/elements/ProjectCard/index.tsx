@@ -50,7 +50,7 @@ const Index: FC<Props> = ({
                 })}
               </div>
             </div>
-            <Link href='/project' scroll={true}>
+            <Link href={`/project/${id}`}>
               <a className='button'>See more</a>
             </Link>
           </div>
@@ -58,7 +58,7 @@ const Index: FC<Props> = ({
             <div className='preview'>
               <Image
                 src={`/svg/previews/${image}`}
-                alt='Feu official'
+                alt={name}
                 width={400}
                 height={250}
               />
@@ -70,28 +70,32 @@ const Index: FC<Props> = ({
   }
 
   return (
-    <div className='project__card'>
-      <div className='card__header'>
-        <h3>Feu Official</h3>
-      </div>
-      <div className='card__body'>
-        <div className='text'>
-          <p>
-            I created this brand of street-wear along with 2 childhood friends 3
-            years ago. We closed our brand, because we didn’t have time to
-            manage it with our studies. This website was made with Prestashop.
-          </p>
+    <Link
+      href={{
+        pathname: `/project/${id}`,
+        query: { fromHome: true },
+      }}
+      passHref
+    >
+      <div className='project__card'>
+        <div className='card__header'>
+          <h3>{name}</h3>
         </div>
-        <div className='preview'>
-          <Image
-            src='/svg/previews/lpcar.svg'
-            alt='Feu official'
-            width={400}
-            height={250}
-          />
+        <div className='card__body'>
+          <div className='text'>
+            <p>{intro}</p>
+          </div>
+          <div className='preview'>
+            <Image
+              src={`/svg/previews/${image}`}
+              alt={name}
+              width={400}
+              height={250}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
