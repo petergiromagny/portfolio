@@ -6,6 +6,7 @@
   font-weight: 600;
   font-size: 16px;
   color: $text;
+  cursor: pointer;
   transition: color 0.2s ease;
   &:hover {
     color: $red;
@@ -153,7 +154,7 @@ a {
   .scroll__content {
     position: fixed;
     right: 50px;
-    bottom: 50px;
+    bottom: 65px;
     transition: all 0.3s ease;
 
     &:hover {

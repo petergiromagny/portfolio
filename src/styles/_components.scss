@@ -135,6 +135,10 @@
       flex-direction: column;
       justify-content: space-evenly;
 
+      h2 {
+        margin: 0;
+      }
+
       a {
         width: 130px;
         text-align: center;
@@ -176,5 +180,6 @@
     font-weight: 500;
     font-size: 14px;
     margin: 2px 0;
+    user-select: none;
   }
 }
