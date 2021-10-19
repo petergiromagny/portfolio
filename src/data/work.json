@@ -3,7 +3,10 @@
     "name": "La Ligne Web",
     "location": "Aix-en-Provence, France",
     "date": "September 2020 to January 2021",
-    "text": "My work consisted of updating and creating various websites with Prestashop, Wordpress or with frameworks such as CodeIgniter.",
+    "text": [
+      "Managed a team and met the clients for the specifications and the follow-up of the project.",
+      "I have also done web development by creating, modifying, and debugging website built with CodeIgniter or Symfony (Frontend - Backend) and such as CMS Prestashop and Wordpress"
+    ],
     "url": "https://www.la-ligne-web.com/",
     "urlName": "Web agency"
   },
@@ -11,7 +14,9 @@
     "name": "La Ligne Web",
     "location": "Aix-en-Provence, France",
     "date": "January to April 2020",
-    "text": "My work consisted of updating and creating various websites with Prestashop, Wordpress or with frameworks such as CodeIgniter.",
+    "text": [
+      "My work consisted of updating and creating various websites with Prestashop, Wordpress or with frameworks such as CodeIgniter."
+    ],
     "url": "https://www.la-ligne-web.com/",
     "urlName": "Web agency"
   },
@@ -19,7 +24,9 @@
     "name": "E-partenaire",
     "location": "Aix-en-Provence, France",
     "date": "April to July 2019",
-    "text": "As an intern for a duration of 3 months, my job was to fix different problems and to create a website with PHP framework as CodeIgniter or Laravel and Wordpress.",
+    "text": [
+      "As an intern for a duration of 3 months, my job was to fix different problems and to create a website with PHP framework as Symfony or Laravel and Wordpress."
+    ],
     "url": "https://agence-web-aix-en-provence.fr/",
     "urlName": "Web agency"
   },
@@ -27,8 +34,10 @@
     "name": "Iniva",
     "location": "Miami, United-States",
     "date": "September to October 2018",
-    "text": "Iniva was a good experience, firstly because it greatly improved my level of english, as well as because it allowed me to start web developping with maintenance of the Shopify module of the website and creation of a newsletter.",
-    "url": "https://www.la-ligne-web.com/",
+    "text": [
+      "Iniva was a good experience, firstly because it greatly improved my level of english, as well as because it allowed me to start web developping with maintenance of the Shopify module of the website and creation of a newsletter."
+    ],
+    "url": "",
     "urlName": "African Concept store"
   }
 ]

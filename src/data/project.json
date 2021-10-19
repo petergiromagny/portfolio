@@ -2,44 +2,82 @@
   {
     "id": 1,
     "name": "Feu Official",
-    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "lpcar.svg",
-    "details": [],
-    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+    "intro": "I created this brand of street-wear with 2 childhood friends 5 years ago. This website was made with Prestashop hosted by OVH. Unfortunately, we closed our brand, because we didn’t have time to manage it with our studies.",
+    "image": "feu.svg",
+    "details": [
+      "Feu was a brand of street-wear created in beginning 2017 with two chidlhood friends. The first season, we worked with a textile factory, they were 3 t-shirt design for men/women then for the production of our second season weused the dropshipping system due of the storage of clothes and to save a lot of money of an overproduction. Unfortunalty, we closed our brand on year later due of our studies.",
+      "During this project I was responsible for the IT part of our part, I created our e-commerce website with Prestashop and it was hosted by OVH."
+    ],
+    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS", "JavaScript"]
   },
   {
     "id": 2,
-    "name": "LP Car",
-    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "lpcar.svg",
-    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+    "name": "Cutland",
+    "intro": "Cutland is an e-commerce website, selling bracelets with original concept. I developed this website in collaborating with a friend as freelancer. We used Wordpress CMS with WooCommerce plugin to create Cutland.",
+    "image": "cutland.svg",
+    "link": "https://cutland.fr/",
+    "tags": ["Wordpress", "PHP", "HTML/CSS", "JavaScript"]
   },
   {
     "id": 3,
-    "name": "Homely",
-    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "lpcar.svg",
-    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+    "name": "Santons Mamérian",
+    "intro": "Santons Mamérian is an craftsman creator of santons for Christmas decorations and they have been customers for over 7 years. I made this website during my last internship (La Ligne Web) with the Prestashop CMS.",
+    "image": "santons-mamerian.svg",
+    "link": "https://www.santons-mamerian.com/en/",
+    "tags": ["Prestashop", "PHP", "HTML/CSS", "JavaScript"]
   },
   {
     "id": 4,
-    "name": "Santons Richard",
-    "intro": "Cutland is a personnal project I created collaborating with a friend, a website selling bracelets. This is e-commerce website made with Wordpress.",
+    "name": "LP Car",
+    "intro": "Lpcar allows to sell and buy a vehicle with the help of a professional. I worked on this project as freelancer and I used Wordpress CMS hosted by OVH.",
     "image": "lpcar.svg",
-    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+    "link": "https://lpcar.fr/",
+    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS", "JavaScript"]
   },
   {
     "id": 5,
     "name": "Ask",
-    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "lpcar.svg",
-    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS"]
+    "intro": "Ask allows companies to take care of their needs through a mobile application. Ask's services offer time savings, cost optimization and daily support. I developed Ask website with Wordpress CMS as freelancer.",
+    "image": "ask.svg",
+    "link": "https://ask-group.fr/",
+    "tags": ["Wordpress", "PHP", "HTML/CSS"]
   },
   {
     "id": 6,
+    "name": "Distridog Pro",
+    "intro": "Distridog Pro is an e-commerce website for pets for professionals and individuals, with more than 10 000 items, Distridog has the largest selection of accessories in the south of France. I worked on this website during my last internship with Prestashop CMS.",
+    "image": "distridog.svg",
+    "link": "https://www.distridog.pro/",
+    "tags": ["Prestashop", "OVH", "PHP", "HTML/CSS", "JavaScript"]
+  },
+  {
+    "id": 7,
     "name": "Youseeme Neobank",
-    "intro": "I created this brand of street-wear along with 2 childhood friends 3 years ago. We closed our brand, because we didn’t have time to manage it with our studies. This website was made with Prestashop.",
-    "image": "lpcar.svg",
-    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS"]
+    "intro": "This brand new neobank allows users to have their own IBAN, virtual / physical credit card and others bank services. I develop the whole project for my former company (La Ligne Web) with whom I completed two internships and Treezor who is the company that provides the API bank services.",
+    "image": "youseeme.svg",
+    "details": [
+      "Youseeme is a brand new neobank, with the possibilty to make deposit, transfer, get your own IBAN and BIC and create virtual / physical card. All those services are available through an API from the Treezor.Treezor is an electronic money institution approved by the ACPR (the French regulator), a Principal Member of the Mastercard network and a participant of the SEPA network. Treezor is a solution thats allows user of Youseeme to realize banking operations.",
+      "I work as a freelancer for my former company (La Ligne Web) with whom I completed two internships. I realize the entire development from front end with the React framework, Next.js to the back end with the integration of Treezor API. For some features a developer of the company helped me "
+    ],
+    "tags": ["React", "Next.js", "Typescript", "Prisma", "ESLint", "Prettier"]
+  },
+  {
+    "id": 8,
+    "name": "Smart Scale",
+    "intro": "The SmartScale project was intended for a research and development project during my studies. It consisted in making a link with a scale with food detection in order to have a follow-up of the food hygiene. It allowed users to create an account and customize it with favorite foods and goal information.",
+    "image": "smartscale.svg",
+    "details": [
+      "Smart Scale is a project that brought together several areas, first there was an electronic side with the creation of the scale with its components. Then we had the AI, which allowed the recognition of food. Then, after the processing of the food, the application displays the results with the possibility for the user to change the names of the identified foods in order to allow our AI to learn from the mistakes made and to enlarge our dataset.",
+      "During this project we used several technologies, for the construction of our scale the components provided by the school and the realization of the code under Arduino. For the AI we worked with Python and the notebook Jupyter. Then for the mobile application we used React Native with different libraries including Johnny-Five which allowed us to communicate between the scale and the mobile application."
+    ],
+    "tags": [
+      "React Native",
+      "Typescript",
+      "Firebase",
+      "MongoDB",
+      "SQLServer",
+      "ESLint",
+      "Prettier"
+    ]
   }
 ]
