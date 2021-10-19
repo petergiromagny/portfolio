@@ -4,24 +4,33 @@ import type { NextPage } from "next";
 // Import layouts
 import Body from "components/layouts/Body";
 import Navbar from "components/layouts/Navbar";
-import Footer from "components/layouts/Footer";
-// Import sections
-import Launch from "components/sections/Launch";
-import Experience from "components/sections/Experience";
-import Skill from "components/sections/Skill";
-import Project from "components/sections/Project";
+
+const LaunchDynamic = dynamic(() => import("components/sections/Launch"));
+const ExperienceDynamic = dynamic(
+  () => import("components/sections/Experience")
+);
+const SkillDynamic = dynamic(() => import("components/sections/Skill"));
+const ProjectDynamic = dynamic(() => import("components/sections/Project"));
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false);
+
+  const handleHamburgerAction = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
 
   return (
     <div className='home__content'>
       <Body>
-        <Navbar />
-        <Launch setIsLoading={setIsLoading} />
-        <Experience />
-        <Skill />
-        <Project />
+        <Navbar
+          isOpen={hamburgerOpen}
+          handleHamburgerAction={handleHamburgerAction}
+        />
+        <LaunchDynamic setIsLoading={setIsLoading} />
+        <ExperienceDynamic />
+        <SkillDynamic />
+        <ProjectDynamic />
       </Body>
     </div>
   );

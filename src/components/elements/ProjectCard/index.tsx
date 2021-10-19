@@ -9,6 +9,7 @@ interface Props {
   name?: string;
   intro?: string;
   image?: string;
+  link?: string;
   tags?: string[];
   openProject?: boolean;
   isHorizontal?: boolean;
@@ -19,10 +20,19 @@ const Index: FC<Props> = ({
   name,
   intro,
   image,
+  link,
   tags = [],
   openProject = false,
   isHorizontal = false,
 }) => {
+  let linkWebsite = "";
+
+  if (link === undefined) {
+    linkWebsite = `/project/${id}`;
+  } else {
+    linkWebsite = link;
+  }
+
   // Project card to see more
   if (openProject) {
     return (
@@ -50,9 +60,20 @@ const Index: FC<Props> = ({
                 })}
               </div>
             </div>
-            <Link href={`/project/${id}`}>
-              <a className='button'>See more</a>
-            </Link>
+            {link !== undefined ? (
+              <a
+                className='button'
+                href={linkWebsite}
+                rel='noreferrer noopener'
+                target='_blank'
+              >
+                Visit website
+              </a>
+            ) : (
+              <Link href={linkWebsite}>
+                <a className='button'>See more</a>
+              </Link>
+            )}
           </div>
           <div className='col__2'>
             <div className='preview'>
@@ -61,6 +82,7 @@ const Index: FC<Props> = ({
                 alt={name}
                 width={400}
                 height={250}
+                loading='eager'
               />
             </div>
           </div>
@@ -72,12 +94,15 @@ const Index: FC<Props> = ({
   return (
     <Link
       href={{
-        pathname: `/project/${id}`,
+        pathname: linkWebsite,
         query: { fromHome: true },
       }}
-      passHref
     >
-      <div className='project__card'>
+      <a
+        className='project__card'
+        rel='noreferrer noopener'
+        target={`${link !== undefined ? "_blank" : ""}`}
+      >
         <div className='card__header'>
           <h3>{name}</h3>
         </div>
@@ -91,10 +116,11 @@ const Index: FC<Props> = ({
               alt={name}
               width={400}
               height={250}
+              loading='eager'
             />
           </div>
         </div>
-      </div>
+      </a>
     </Link>
   );
 };

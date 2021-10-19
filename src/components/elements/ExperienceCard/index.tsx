@@ -5,8 +5,8 @@ interface Props {
   title: string;
   location: string;
   date: string;
-  text?: string | null;
-  url?: string | null;
+  text: string[];
+  url?: string;
   urlName?: string;
 }
 
@@ -44,7 +44,9 @@ const Index: FC<Props> = ({
         </h4>
       </div>
       <div className='card__text'>
-        <p>{text}</p>
+        {text.map((item: string, index: number) => {
+          return <p key={index}>{item}</p>;
+        })}
       </div>
     </div>
   );

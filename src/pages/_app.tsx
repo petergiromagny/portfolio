@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 // Import layouts
 import Header from "components/layouts/Header";
 import Footer from "components/layouts/Footer";
+import Loader from "components/elements/Loader";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -32,6 +33,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <div className='page__container'>
       <Header />
+      {/* <Loader /> */}
       <Component {...pageProps} />
       <Footer />
       <div

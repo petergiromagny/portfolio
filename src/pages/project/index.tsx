@@ -1,13 +1,24 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-// Import components
-import ProjectCard from "components/elements/ProjectCard";
 // Import data
 import projects from "data/project.json";
+// Import type
+import type { IProject } from "types/project";
+
+const ProjectCardDynamic = dynamic(
+  () => import("components/elements/ProjectCard")
+);
 
 const Index = () => {
-  const router = useRouter();
+  let lastProjects: IProject[] = [];
+
+  for (let index = projects.length; 0 <= index; index--) {
+    if (projects[index] !== undefined) {
+      lastProjects.push(projects[index]);
+    }
+  }
 
   return (
     <div id='project__content'>
@@ -21,14 +32,15 @@ const Index = () => {
           </Link>
         </div>
         <div className='project__body'>
-          {projects.map((item) => (
-            <ProjectCard
+          {lastProjects.map((item) => (
+            <ProjectCardDynamic
               isHorizontal
               key={item.id}
               id={item.id}
               tags={item.tags}
               name={item.name}
               intro={item.intro}
+              link={item.link}
               image={item.image}
             />
           ))}

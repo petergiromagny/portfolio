@@ -18,20 +18,20 @@ const Index: FC<Props> = ({ setIsLoading }) => {
           </div>
           <div className='text__body'>
             <p>
-              Hello, I&apos;m Peter, student in my 3rd year of IT engineering
-              and this is my online presentation, made with HTML, CSS(Sass) and
-              some JS.
+              I&apos;m student in my last year computer engineering school and
+              I&apos;m freelancer on my own time. This is my online
+              presentation, to introduce my experiences, my top skills and some
+              of my projects.
             </p>
             <p>
-              During my two last years, I learned several programming languages,
-              and they were all very interesting, but some specific ones really
-              stood out to me.
+              During all my studies and some personnal projects I learned
+              several programming languages. I&apos;m specializing in full stack
+              development of web and mobile applications
             </p>
             <p>
-              Web development is a passion to me, you&apos;re always learning
-              some new things, some new ways to do, whether you&apos;re alone or
-              in a team, because the development of a website isn’t just one
-              person, it is all team.
+              The development of applications is a passion for me, you&apos;re
+              always learning some new things, some new ways to do, whether
+              you&apos;re alone or in a team.
             </p>
           </div>
           <div className='text__footer'>
@@ -42,43 +42,21 @@ const Index: FC<Props> = ({ setIsLoading }) => {
           <span className='circle__opacity circle__opacity--high'></span>
           <span className='circle__opacity circle__opacity--mid'></span>
           <span className='circle__opacity circle__opacity--low'></span>
-          <Image
-            src='/svg/avatar.svg'
-            alt="Peter's avatar"
-            width={200}
-            height={200}
-          />
-          <div className='avatar__shape avatar__shape--triangle'>
+          <div className='avatar__shape avatar__shape--triangle'></div>
+          <div className='desktop__content'>
             <Image
-              src='/svg/triangle.svg'
-              alt='triangle shape'
+              src='/svg/avatar.svg'
+              alt="Peter's avatar"
               width={200}
               height={200}
-              onLoadingComplete={() => setIsLoading(false)}
             />
           </div>
-          <div className='avatar__shape avatar__shape--half-donut'>
+          <div className='mobile__content'>
             <Image
-              src='/svg/half-donut.svg'
-              alt='half donut shape'
-              width={150}
-              height={150}
-            />
-          </div>
-          <div className='avatar__shape avatar__shape--donut'>
-            <Image
-              src='/svg/donut.svg'
-              alt='donut shape'
-              width={135}
-              height={135}
-            />
-          </div>
-          <div className='avatar__shape avatar__shape--plus'>
-            <Image
-              src='/svg/plus.svg'
-              alt='plus shape'
-              width={200}
-              height={200}
+              src='/svg/avatar.svg'
+              alt="Peter's avatar"
+              width={125}
+              height={125}
             />
           </div>
         </div>

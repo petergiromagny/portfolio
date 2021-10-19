@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 // Import data
 import projects from "data/project.json";
@@ -23,9 +23,9 @@ const Index: FC = () => {
     }
   });
 
-  console.log(currentProject);
+  const { id, name, tags, details, image } = currentProject;
 
-  if (currentProject.tags === undefined) {
+  if (tags === undefined) {
     return (
       <div id='project__content--one'>
         <div className='section__header project__header'>
@@ -38,10 +38,10 @@ const Index: FC = () => {
   return (
     <div id='project__content--one'>
       <div className='section__header project__header'>
-        <h1>{currentProject.name}</h1>
-        {currentProject.tags !== undefined && (
+        <h1>{name}</h1>
+        {tags !== undefined && (
           <div className='project__tag'>
-            {currentProject.tags.map((item: string, index: number) => {
+            {tags.map((item: string, index: number) => {
               return <Tag text={item} key={index} />;
             })}
           </div>
@@ -62,7 +62,18 @@ const Index: FC = () => {
           )}
         </div>
         <div className='project__body'>
-          <p>{currentProject.intro}</p>
+          {details &&
+            details.map((item: string, index: number) => {
+              return <p key={index}>{item}</p>;
+            })}
+          <div className='project__image'>
+            <Image
+              src={`/svg/previews/${image}`}
+              alt={currentProject.name}
+              width={800}
+              height={400}
+            />
+          </div>
         </div>
       </div>
     </div>
