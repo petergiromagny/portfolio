@@ -1,0 +1,51 @@
+$large-desktop: 1440px;
+$medium-desktop: 1280px;
+$handhelds-landscape: 1024px;
+$small-desktop: 960px;
+/* $handheld: 768px; */
+$handheld: 920px;
+$mobile: 640px;
+$mobile-landscape: 480px;
+
+@mixin respond-to($media) {
+  @if $media == largeDesktop {
+    @media only screen and (min-width: $medium-desktop) {
+      @content;
+    }
+  }
+  @if $media == mediumDesktop {
+    @media only screen and (max-width: $medium-desktop - 1) {
+      @content;
+    }
+  }
+  @if $media == smallDesktop {
+    @media only screen and (max-width: $small-desktop) {
+      @content;
+    }
+  }
+  @if $media == handhelds {
+    @media only screen and (max-width: $handheld) {
+      @content;
+    }
+  }
+  @if $media == handhelds-landscape {
+    @media only screen and (min-device-width: $handheld) and (max-device-width: $handhelds-landscape) and (orientation: landscape) {
+      @content;
+    }
+  }
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  @if $media == mobile-portrait {
+    @media only screen and (max-width: $mobile) and (orientation: portrait) {
+      @content;
+    }
+  }
+  @if $media == mobile-landscape {
+    @media only screen and (min-width: 320px) and (max-width: $mobile-landscape) and (orientation: landscape) {
+      @content;
+    }
+  }
+}

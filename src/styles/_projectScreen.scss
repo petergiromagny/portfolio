@@ -10,6 +10,10 @@
     transform: translateX(-50%);
     top: 30px;
     left: 50%;
+
+    @include respond-to(mediumDesktop) {
+      padding: 0 2rem;
+    }
   }
 
   .project__header {
@@ -30,6 +34,15 @@
   .project__info {
     .project__tags {
       display: flex;
+      flex-wrap: wrap;
+
+      .tag__content {
+        margin-bottom: 10px;
+      }
+
+      @include respond-to(handhelds) {
+        justify-content: center;
+      }
     }
   }
 }
@@ -37,7 +50,7 @@
 #project__content--one {
   animation: openPage linear 0.4s;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 0;
   background-color: $white;
 
   .back__home {
@@ -46,13 +59,17 @@
     transform: translateX(-50%);
     top: 30px;
     left: 50%;
+
+    @include respond-to(mediumDesktop) {
+      padding: 0 2rem;
+    }
   }
 
   .project__header {
     background-color: $grey;
     justify-content: center;
     padding: 5.5rem 0 5rem 0;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: grid;
 
     h1 {
@@ -64,6 +81,26 @@
     .project__tag {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      .tag__content {
+        @include respond-to(handhelds) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @include respond-to(handhelds) {
+      padding: 5.5rem 0 2.5rem 0;
+    }
+  }
+
+  .project__body {
+    max-width: 800px;
+    margin: auto;
+
+    .project__image {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
 }

@@ -1,11 +1,102 @@
 .navbar__container {
-  justify-content: space-between;
-  display: flex;
-  padding: 1.5rem 0;
+  position: relative;
 
-  .navbar__link {
-    @include link;
-    margin-right: 2rem;
+  .navbar__hamburger {
+    display: none;
+    padding-top: 1rem;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+
+    .hamburger__line {
+      position: absolute;
+      left: 0;
+      background-color: $red;
+      height: 3px;
+      width: 100%;
+      border-radius: 10px;
+      transition: all 0.2s linear;
+    }
+
+    @include respond-to(handhelds) {
+      display: initial;
+    }
+  }
+
+  .navbar__hamburger--opened {
+    .hamburger__line {
+      &--top {
+        top: 0;
+        transform: rotate(45deg) translate(11px, 11px);
+      }
+      &--middle {
+        transform: translateX(150px);
+      }
+      &--bottom {
+        top: 100%;
+        transform: rotate(-45deg) translate(10px, -10px);
+      }
+    }
+  }
+  .navbar__hamburger--closed {
+    .hamburger__line {
+      &--top {
+        top: 0;
+      }
+      &--middle {
+        top: 50%;
+        transform: translateY(-2px);
+      }
+      &--bottom {
+        top: 100%;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .navbar__status {
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    display: flex;
+    transition: opacity 0.3s ease;
+
+    @include respond-to(handhelds) {
+      &--opened {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      &--closed {
+        transform: translateY(800px);
+        opacity: 0;
+      }
+    }
+
+    .navbar__link {
+      @include link;
+      margin-right: 2rem;
+      @include respond-to(handhelds) {
+        width: 100%;
+        font-size: 35px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include respond-to(handhelds) {
+      padding: 80px 50px 30px 50px;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      position: fixed;
+      background-color: $grey;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
   }
 
   .col__network {
@@ -17,22 +108,40 @@
         margin-right: 1.5rem;
       }
     }
+    @include respond-to(handhelds) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .col__nav {
     .navbar__list {
       text-align: right;
+      @include respond-to(handhelds) {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
     }
   }
 
   &--footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1rem;
     width: 100%;
 
     .navbar__link {
       @include link;
       margin: 0 1rem;
+    }
+
+    @include respond-to(mediumDesktop) {
+      padding: 0 2rem;
+    }
+    @include respond-to(handhelds) {
+      display: none;
     }
   }
 }

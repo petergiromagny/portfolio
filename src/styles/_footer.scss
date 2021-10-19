@@ -16,6 +16,10 @@ footer {
       margin: auto;
       text-align: center;
       margin-bottom: 2rem;
+
+      @include respond-to(handhelds) {
+        width: 100%;
+      }
     }
 
     a {
@@ -23,5 +27,8 @@ footer {
       text-align: center;
       margin-bottom: 0.5rem;
     }
+  }
+  @include respond-to(handhelds) {
+    padding: 3rem 0 2rem 0;
   }
 }

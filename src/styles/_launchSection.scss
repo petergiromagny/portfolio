@@ -17,6 +17,9 @@
     .section__header {
       justify-content: flex-start;
       margin-bottom: 1rem;
+      @include respond-to(handhelds) {
+        justify-content: center;
+      }
     }
 
     .text__body {
@@ -30,6 +33,31 @@
     justify-content: center;
     align-items: center;
 
+    .shape__content {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--yellow {
+        top: 50%;
+      }
+      &--red {
+        top: 55%;
+      }
+    }
+
+    .avatar__content {
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%);
+    }
+
+    // TO DELETE
     .circle__opacity {
       position: absolute;
       left: 50%;
@@ -42,19 +70,32 @@
         opacity: 5%;
         width: 400px;
         height: 400px;
+        @include respond-to(handhelds) {
+          width: 300px;
+          height: 300px;
+        }
       }
       &--mid {
         opacity: 10%;
         width: 325px;
         height: 325px;
+        @include respond-to(handhelds) {
+          width: 225px;
+          height: 225px;
+        }
       }
       &--low {
         opacity: 15%;
         width: 250px;
         height: 250px;
+        @include respond-to(handhelds) {
+          width: 150px;
+          height: 150px;
+        }
       }
     }
 
+    // TO DELETE
     .avatar__shape {
       position: absolute;
       animation-name: floating;
@@ -82,5 +123,12 @@
         animation-duration: 3.5s;
       }
     }
+
+    @include respond-to(handhelds) {
+      min-height: 400px;
+    }
+  }
+  @include respond-to(handhelds) {
+    padding: 3rem 0 1rem 0;
   }
 }

@@ -4,6 +4,15 @@
   .section__header {
     justify-content: flex-start;
     margin-bottom: 2rem;
+
+    @include respond-to(handhelds) {
+      justify-content: center;
+      margin-top: 2rem;
+
+      .section__header {
+        margin-bottom: 1rem;
+      }
+    }
   }
   .experience__col {
     .experience__card {
@@ -16,6 +25,14 @@
     .experience__card {
       &:nth-last-child(n + 2) {
         margin-bottom: 2rem;
+      }
+    }
+
+    @include respond-to(handhelds) {
+      margin-top: 2rem;
+
+      .section__header {
+        margin-bottom: 1rem;
       }
     }
   }

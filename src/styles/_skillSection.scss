@@ -18,6 +18,13 @@
 
       & > div {
         margin: 0 2rem !important;
+        @include respond-to(handhelds) {
+          margin: 10px !important;
+        }
+      }
+
+      @include respond-to(handhelds) {
+        flex-wrap: wrap;
       }
     }
   }
