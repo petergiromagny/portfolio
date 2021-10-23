@@ -1,13 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
-// Import components
-import Button from "components/elements/Button";
 
-interface Props {
-  setIsLoading: (isLoading: boolean) => void;
-}
-
-const Index: FC<Props> = ({ setIsLoading }) => {
+const Index: FC = () => {
   return (
     <div id='launch__content'>
       <div className='row__flex container'>
@@ -35,7 +29,14 @@ const Index: FC<Props> = ({ setIsLoading }) => {
             </p>
           </div>
           <div className='text__footer'>
-            <Button text='Download CV' />
+            <a
+              href='https://drive.google.com/file/d/1nh_rkX3oFvBrfggSR2vzwMFQIFqRZGO5/view?usp=sharing'
+              rel='noopener noreferrer'
+              target='_blank'
+              className='button'
+            >
+              Download CV
+            </a>
           </div>
         </div>
         <div className='col__2 launch__col--right'>
