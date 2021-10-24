@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import type { NextPage } from "next";
 // Import layouts
@@ -13,7 +13,6 @@ const SkillDynamic = dynamic(() => import("components/sections/Skill"));
 const ProjectDynamic = dynamic(() => import("components/sections/Project"));
 
 const Home: NextPage = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false);
 
   const handleHamburgerAction = () => {
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
           isOpen={hamburgerOpen}
           handleHamburgerAction={handleHamburgerAction}
         />
-        <LaunchDynamic setIsLoading={setIsLoading} />
+        <LaunchDynamic />
         <ExperienceDynamic />
         <SkillDynamic />
         <ProjectDynamic />

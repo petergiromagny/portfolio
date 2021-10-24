@@ -57,7 +57,6 @@
       transform: translate(-50%, -50%);
     }
 
-    // TO DELETE
     .circle__opacity {
       position: absolute;
       left: 50%;
@@ -95,7 +94,6 @@
       }
     }
 
-    // TO DELETE
     .avatar__shape {
       position: absolute;
       animation-name: floating;
@@ -103,24 +101,62 @@
       animation-timing-function: ease-in-out;
 
       &--triangle {
-        left: 25px;
-        top: 0;
+        left: -130px;
+        top: -100px;
         animation-duration: 2.5s;
       }
       &--half-donut {
-        right: 50px;
-        top: 0;
+        right: -120px;
+        top: -100px;
         animation-duration: 3s;
       }
       &--donut {
-        right: 50px;
-        bottom: 0;
+        right: -120px;
+        bottom: -100px;
         animation-duration: 4s;
       }
       &--plus {
-        left: 25px;
-        bottom: 0;
+        left: -130px;
+        bottom: -100px;
         animation-duration: 3.5s;
+      }
+    }
+
+    .desktop__content {
+      position: relative;
+    }
+
+    .mobile__content {
+      position: relative;
+      .avatar__shape {
+        &--triangle {
+          left: -100px;
+          top: -75px;
+          img {
+            width: 130px;
+          }
+        }
+        &--half-donut {
+          right: -95px;
+          top: -70px;
+          img {
+            width: 100px;
+          }
+        }
+        &--donut {
+          right: -90px;
+          bottom: -75px;
+          img {
+            width: 100px;
+          }
+        }
+        &--plus {
+          left: -100px;
+          bottom: -85px;
+          img {
+            width: 130px;
+          }
+        }
       }
     }
 

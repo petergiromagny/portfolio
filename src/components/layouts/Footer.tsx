@@ -15,7 +15,7 @@ const Index: FC = () => {
             If you have a website or mobile app idea in mind, feel free to
             contact me.
           </p>
-          <a href='mailto:peter.giromagny@me.com' className='button'>
+          <a href='mailto:peter.giromagny@viacesi.fr' className='button'>
             Say Hello!
           </a>
           <Navbar isFooter />
