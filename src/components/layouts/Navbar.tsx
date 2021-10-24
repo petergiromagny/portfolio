@@ -132,7 +132,7 @@ const Index: FC<Props> = ({
               Projects
             </a>
             <a
-              href='mailto:peter.giromagny@me.com'
+              href='mailto:peter.giromagny@viacesi.fr'
               className='button'
               onClick={() => handleHamburgerAction()}
             >
