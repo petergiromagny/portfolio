@@ -19,6 +19,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     });
   };
 
+  const handleRouteChange = (url: string) => {
+    (window as any).gtag(
+      "config",
+      `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`,
+      {
+        page_path: url,
+      }
+    );
+  };
+
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.pageYOffset > 500) {
@@ -27,7 +37,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         setIsVisible(false);
       }
     });
-  }, [router.pathname]);
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.pathname, router.events]);
 
   return (
     <div className='page__container'>
