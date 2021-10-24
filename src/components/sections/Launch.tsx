@@ -46,19 +46,83 @@ const Index: FC = () => {
           <div className='avatar__shape avatar__shape--triangle'></div>
           <div className='desktop__content'>
             <Image
-              src='/svg/avatar.svg'
+              src='/img/avatar.png'
               alt="Peter's avatar"
-              width={200}
-              height={200}
+              width={175}
+              height={175}
             />
+            <div className='avatar__shape avatar__shape--triangle'>
+              <Image
+                src='/img/shape/triangle.png'
+                alt='triangle shape'
+                width={175}
+                height={175}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--half-donut'>
+              <Image
+                src='/img/shape/half-donut.png'
+                alt='half donut shape'
+                width={140}
+                height={140}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--donut'>
+              <Image
+                src='/img/shape/donut.png'
+                alt='donut shape'
+                width={120}
+                height={120}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--plus'>
+              <Image
+                src='/img/shape/plus.png'
+                alt='plus shape'
+                width={175}
+                height={175}
+              />
+            </div>
           </div>
           <div className='mobile__content'>
             <Image
-              src='/svg/avatar.svg'
+              src='/img/avatar.png'
               alt="Peter's avatar"
               width={125}
               height={125}
             />
+            <div className='avatar__shape avatar__shape--triangle'>
+              <Image
+                src='/img/shape/triangle.png'
+                alt='triangle shape'
+                width={175}
+                height={175}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--half-donut'>
+              <Image
+                src='/img/shape/half-donut.png'
+                alt='half donut shape'
+                width={140}
+                height={140}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--donut'>
+              <Image
+                src='/img/shape/donut.png'
+                alt='donut shape'
+                width={120}
+                height={120}
+              />
+            </div>
+            <div className='avatar__shape avatar__shape--plus'>
+              <Image
+                src='/img/shape/plus.png'
+                alt='plus shape'
+                width={175}
+                height={175}
+              />
+            </div>
           </div>
         </div>
       </div>
