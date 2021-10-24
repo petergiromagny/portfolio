@@ -20,6 +20,7 @@
 *.pem
 .idea
 yarn.lock
+package-lock.json
 
 # debug
 npm-debug.log*
