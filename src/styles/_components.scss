@@ -168,7 +168,9 @@
     }
     .preview {
       display: grid;
-      margin-top: 2.5rem;
+      justify-content: center;
+      margin: 2.5rem auto;
+      padding: 1rem 0;
     }
   }
 
@@ -263,7 +265,7 @@
 
 .tag__content {
   border-radius: 10px;
-  padding: 0px 10px;
+  padding: 0 10px;
   background-color: rgba($black, 0.3);
   margin-right: 5px;
 
