@@ -5,14 +5,13 @@ import Link from "next/link";
 import Tag from "../Tag";
 
 interface Props {
-  id?: number;
-  name?: string;
-  intro?: string;
-  image?: string;
+  id: number;
+  name: string;
+  intro: string;
+  image: string;
   link?: string;
-  tags?: string[];
-  openProject?: boolean;
-  isHorizontal?: boolean;
+  tags: string[];
+  isHorizontal: boolean;
 }
 
 const Index: FC<Props> = ({
@@ -22,10 +21,9 @@ const Index: FC<Props> = ({
   image,
   link,
   tags = [],
-  openProject = false,
   isHorizontal = false,
 }) => {
-  let linkWebsite = "";
+  let linkWebsite: string;
 
   if (link === undefined) {
     linkWebsite = `/project/${id}`;
@@ -33,22 +31,10 @@ const Index: FC<Props> = ({
     linkWebsite = link;
   }
 
-  // Project card to see more
-  if (openProject) {
-    return (
-      <div className='project__card project__card--more'>
-        <span>Don&apos;t keep the suspense alive</span>
-        <Link href='/project'>
-          <a className='button'>See more</a>
-        </Link>
-      </div>
-    );
-  }
-
   // Card for project page
   if (isHorizontal) {
     return (
-      <div className='project__card project__card--horizontal'>
+      <div className='project__card project__card--horizontal' id={`project-${id}`}>
         <div className='card__body'>
           <div className='col__2 col__text'>
             <h2>{name}</h2>
@@ -82,7 +68,7 @@ const Index: FC<Props> = ({
                 alt={name}
                 width={400}
                 height={250}
-                loading='eager'
+                priority
               />
             </div>
           </div>
@@ -101,7 +87,7 @@ const Index: FC<Props> = ({
       <a
         className='project__card'
         rel='noreferrer noopener'
-        target={`${link !== undefined ? "_blank" : ""}`}
+        target={`${link !== undefined && "_blank"}`}
       >
         <div className='card__header'>
           <h3>{name}</h3>
@@ -116,7 +102,7 @@ const Index: FC<Props> = ({
               alt={name}
               width={400}
               height={250}
-              loading='eager'
+              priority
             />
           </div>
         </div>

@@ -1,18 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, useMemo } from "react";
 import ProjectCard from "components/elements/ProjectCard";
 // Import data
-import project from "data/project.json";
+import projects from "../../data/project.json";
 // Import type
 import type { IProject } from "types/project";
+import Link from "next/link";
 
-const Index: FC = () => {
-  let lastProjects: IProject[] = [];
-
-  for (let index = project.length; project.length - 3 <= index; index--) {
-    if (project[index] !== undefined) {
-      lastProjects.push(project[index]);
-    }
-  }
+const Project: FC = () => {
+  // Get last three projects
+  const lastProjects = useMemo<IProject[]>(() => projects.slice(-3).reverse(), []);
 
   return (
     <div id='project'>
@@ -31,13 +27,19 @@ const Index: FC = () => {
               link={item.link}
               intro={item.intro}
               image={item.image}
+              isHorizontal={false}
             />
           ))}
-          <ProjectCard openProject />
+          <div className='project__card project__card--more'>
+            <span>Don&apos;t keep the suspense alive</span>
+            <Link href='/project'>
+              <a className='button'>See more</a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Index;
+export default Project;
