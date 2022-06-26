@@ -1,9 +1,9 @@
 export interface IProject {
-  id?: number;
-  name?: string;
-  intro?: string;
-  image?: string;
+  id: number;
+  name: string;
+  intro: string;
+  image: string;
   link?: string;
-  tags?: string[];
-  details?: string[];
+  tags: string[];
+  details: string[] | [];
 }

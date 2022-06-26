@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
 // Import data
 import projects from "data/project.json";
 // Import type
@@ -12,13 +11,16 @@ const ProjectCardDynamic = dynamic(
 );
 
 const Index = () => {
-  let lastProjects: IProject[] = [];
-
-  for (let index = projects.length; 0 <= index; index--) {
-    if (projects[index] !== undefined) {
-      lastProjects.push(projects[index]);
+  const lastProjects = useMemo<IProject[]>(() => {
+    let projectsReversed: IProject[] = [];
+    for (let index = projects.length; 0 <= index; index--) {
+      console.log('Array sorted')
+      if (projects[index] !== undefined) {
+        projectsReversed.push(projects[index]);
+      }
     }
-  }
+    return projectsReversed;
+  }, []);
 
   return (
     <div id='project__content'>

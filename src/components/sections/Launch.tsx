@@ -50,6 +50,7 @@ const Launch: FC = () => {
               alt="Peter's avatar"
               width={175}
               height={175}
+              priority
             />
             <div className='avatar__shape avatar__shape--triangle'>
               <Image
@@ -57,6 +58,7 @@ const Launch: FC = () => {
                 alt='triangle shape'
                 width={175}
                 height={175}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--half-donut'>
@@ -65,6 +67,7 @@ const Launch: FC = () => {
                 alt='half donut shape'
                 width={140}
                 height={140}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--donut'>
@@ -73,6 +76,7 @@ const Launch: FC = () => {
                 alt='donut shape'
                 width={120}
                 height={120}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--plus'>
@@ -81,6 +85,7 @@ const Launch: FC = () => {
                 alt='plus shape'
                 width={175}
                 height={175}
+                priority
               />
             </div>
           </div>
@@ -90,6 +95,7 @@ const Launch: FC = () => {
               alt="Peter's avatar"
               width={125}
               height={125}
+              priority
             />
             <div className='avatar__shape avatar__shape--triangle'>
               <Image
@@ -97,6 +103,7 @@ const Launch: FC = () => {
                 alt='triangle shape'
                 width={175}
                 height={175}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--half-donut'>
@@ -105,6 +112,7 @@ const Launch: FC = () => {
                 alt='half donut shape'
                 width={140}
                 height={140}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--donut'>
@@ -113,6 +121,7 @@ const Launch: FC = () => {
                 alt='donut shape'
                 width={120}
                 height={120}
+                priority
               />
             </div>
             <div className='avatar__shape avatar__shape--plus'>
@@ -121,6 +130,7 @@ const Launch: FC = () => {
                 alt='plus shape'
                 width={175}
                 height={175}
+                priority
               />
             </div>
           </div>

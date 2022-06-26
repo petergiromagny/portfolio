@@ -8,7 +8,14 @@
       "Feu was a brand of street-wear created in beginning 2017 with two chidlhood friends. The first season, we worked with a textile factory, they were 3 t-shirt design for men/women then for the production of our second season weused the dropshipping system due of the storage of clothes and to save a lot of money of an overproduction. Unfortunalty, we closed our brand on year later due of our studies.",
       "During this project I was responsible for the IT part of our part, I created our e-commerce website with Prestashop and it was hosted by OVH."
     ],
-    "tags": ["Prestashop", "OVH", "SEO", "PHP", "HTML/CSS", "JavaScript"]
+    "tags": [
+      "Prestashop",
+      "OVH",
+      "SEO",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript"
+    ]
   },
   {
     "id": 2,
@@ -16,7 +23,13 @@
     "intro": "Cutland is an e-commerce website, selling bracelets with original concept. I developed this website in collaborating with a friend as freelancer. We used Wordpress CMS with WooCommerce plugin to create Cutland.",
     "image": "cutland.svg",
     "link": "https://cutland.fr/",
-    "tags": ["Wordpress", "PHP", "HTML/CSS", "JavaScript"]
+    "tags": [
+      "Wordpress",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "details": []
   },
   {
     "id": 3,
@@ -24,7 +37,13 @@
     "intro": "Santons Mamérian is an craftsman creator of santons for Christmas decorations and they have been customers for over 7 years. I made this website during my last internship (La Ligne Web) with the Prestashop CMS.",
     "image": "santons-mamerian.svg",
     "link": "https://www.santons-mamerian.com/en/",
-    "tags": ["Prestashop", "PHP", "HTML/CSS", "JavaScript"]
+    "tags": [
+      "Prestashop",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "details": []
   },
   {
     "id": 4,
@@ -32,7 +51,15 @@
     "intro": "Lpcar allows to sell and buy a vehicle with the help of a professional. I worked on this project as freelancer and I used Wordpress CMS hosted by OVH.",
     "image": "lpcar.svg",
     "link": "https://lpcar.fr/",
-    "tags": ["Wordpress", "OVH", "WooCommerce", "PHP", "HTML/CSS", "JavaScript"]
+    "tags": [
+      "Wordpress",
+      "OVH",
+      "WooCommerce",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "details": []
   },
   {
     "id": 5,
@@ -40,7 +67,12 @@
     "intro": "Ask allows companies to take care of their needs through a mobile application. Ask's services offer time savings, cost optimization and daily support. I developed Ask website with Wordpress CMS as freelancer.",
     "image": "ask.svg",
     "link": "https://ask-group.fr/",
-    "tags": ["Wordpress", "PHP", "HTML/CSS"]
+    "tags": [
+      "Wordpress",
+      "PHP",
+      "HTML/CSS"
+    ],
+    "details": []
   },
   {
     "id": 6,
@@ -48,7 +80,14 @@
     "intro": "Distridog Pro is an e-commerce website for pets for professionals and individuals, with more than 10 000 items, Distridog has the largest selection of accessories in the south of France. I worked on this website during my last internship with Prestashop CMS.",
     "image": "distridog.svg",
     "link": "https://www.distridog.pro/",
-    "tags": ["Prestashop", "OVH", "PHP", "HTML/CSS", "JavaScript"]
+    "tags": [
+      "Prestashop",
+      "OVH",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "details": []
   },
   {
     "id": 7,
@@ -59,7 +98,14 @@
       "Youseeme is a brand new neobank, with the possibilty to make deposit, transfer, get your own IBAN and BIC and create virtual / physical card. All those services are available through an API from the Treezor.Treezor is an electronic money institution approved by the ACPR (the French regulator), a Principal Member of the Mastercard network and a participant of the SEPA network. Treezor is a solution thats allows user of Youseeme to realize banking operations.",
       "I work as a freelancer for my former company (La Ligne Web) with whom I completed two internships. I realize the entire development from front end with the React framework, Next.js to the back end with the integration of Treezor API. For some features a developer of the company helped me "
     ],
-    "tags": ["React", "Next.js", "Typescript", "Prisma", "ESLint", "Prettier"]
+    "tags": [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Prisma",
+      "ESLint",
+      "Prettier"
+    ]
   },
   {
     "id": 8,
