@@ -16,7 +16,7 @@
         margin-bottom: 3rem;
       }
 
-      & > div {
+      & > span {
         margin: 0 2rem !important;
         @include respond-to(handhelds) {
           margin: 10px !important;
