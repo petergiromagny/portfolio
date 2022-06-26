@@ -30,7 +30,7 @@ const Launch: FC = () => {
           </div>
           <div className='text__footer'>
             <a
-              href='https://drive.google.com/file/d/1nh_rkX3oFvBrfggSR2vzwMFQIFqRZGO5/view?usp=sharing'
+              href='https://drive.google.com/file/d/1g-off0bREbx5bPchIa1CoYrEyw0pr6CR/view?usp=sharing'
               rel='noopener noreferrer'
               target='_blank'
               className='button'
