@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "styles/globals.scss";
 import Image from "next/image";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-// Import layouts
 import Header from "components/layouts/Header";
 import Footer from "components/layouts/Footer";
 
@@ -12,37 +11,38 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const router = useRouter();
 
-  const scrollToTop = () => {
-    window.scrollTo({
+  const scrollToTop = useCallback(() => {
+    return window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  };
+  }, []);
 
-  const handleRouteChange = (url: string) => {
-    (window as any).gtag(
-      "config",
-      `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`,
-      {
-        page_path: url,
-      }
-    );
-  };
+  // Method to send to GA screen changes
+  const handleRouteChange = useCallback((url: string) => {
+    window.gtag("config", `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`, {
+      page_path: url,
+    });
+  }, []);
 
+  // Display the icon "scroll to the top" according to scroll position
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      if (window.pageYOffset > 500) {
+      if (window.scrollY > 500) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     });
+  }, []);
 
+  // Track screen changes with router events
+  useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.pathname, router.events]);
+  }, [router.pathname, router.events, handleRouteChange]);
 
   return (
     <div className='page__container'>

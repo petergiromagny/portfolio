@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 
-const Index: FC = () => {
+const Skill: FC = () => {
   return (
     <div id='skill'>
       <div className='container'>
@@ -23,18 +23,6 @@ const Index: FC = () => {
               width={75}
               height={75}
             />
-            {/* <Image
-                src='/svg/skills/html.svg'
-                alt='HTML'
-                width={75}
-                height={75}
-              />
-              <Image
-                src='/svg/skills/css.svg'
-                alt='CSS'
-                width={75}
-                height={75}
-              /> */}
             <Image
               src='/svg/skills/sass.svg'
               alt='Sass'
@@ -119,4 +107,4 @@ const Index: FC = () => {
   );
 };
 
-export default Index;
+export default Skill;

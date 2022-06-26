@@ -5,7 +5,7 @@ import project from "data/project.json";
 // Import type
 import type { IProject } from "types/project";
 
-const Index: FC = () => {
+const Project: FC = () => {
   let lastProjects: IProject[] = [];
 
   for (let index = project.length; project.length - 3 <= index; index--) {
@@ -40,4 +40,4 @@ const Index: FC = () => {
   );
 };
 
-export default Index;
+export default Project;

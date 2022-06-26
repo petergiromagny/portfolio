@@ -5,7 +5,7 @@ import ExperienceCard from "components/elements/ExperienceCard";
 import work from "data/work.json";
 import education from "data/education.json";
 
-const Index: FC = () => {
+const Experience: FC = () => {
   return (
     <div id='experience'>
       <div className='container row__flex'>
@@ -48,4 +48,4 @@ const Index: FC = () => {
   );
 };
 
-export default Index;
+export default Experience;

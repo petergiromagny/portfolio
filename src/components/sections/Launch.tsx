@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 
-const Index: FC = () => {
+const Launch: FC = () => {
   return (
     <div id='launch__content'>
       <div className='row__flex container'>
@@ -130,4 +130,4 @@ const Index: FC = () => {
   );
 };
 
-export default Index;
+export default Launch;

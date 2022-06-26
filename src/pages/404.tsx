@@ -1,15 +1,15 @@
-import React from "react";
-import Image from "next/image";
+import React, { useCallback } from "react";
 import { useRouter } from "next/router";
 // Import components
 import Button from "components/elements/Button";
 
-const Index: React.FC = () => {
+const Error404: React.FC = () => {
   const router = useRouter();
 
-  const handleGoBack = () => {
+  const handleGoBack = useCallback(() => {
     router.back();
-  };
+  }, [router]);
+
   return (
     <div className='error__container'>
       <div className='error__content'>
@@ -23,4 +23,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default Error404;
