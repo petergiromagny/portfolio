@@ -8,12 +8,10 @@ import type { IProject } from "types/project";
 // Import components
 import Tag from "components/elements/Tag";
 
-interface Props {}
-
 const Index: FC = () => {
   const router = useRouter();
 
-  let currentProject: IProject = {};
+  let currentProject: Partial<IProject> = {};
 
   const { projectId, fromHome } = router.query;
 
@@ -23,7 +21,7 @@ const Index: FC = () => {
     }
   });
 
-  const { id, name, tags, details, image } = currentProject;
+  const { name, tags, details, image } = currentProject;
 
   if (tags === undefined) {
     return (
@@ -39,7 +37,7 @@ const Index: FC = () => {
     <div id='project__content--one'>
       <div className='section__header project__header'>
         <h1>{name}</h1>
-        {tags !== undefined && (
+        {(
           <div className='project__tag'>
             {tags.map((item: string, index: number) => {
               return <Tag text={item} key={index} />;
