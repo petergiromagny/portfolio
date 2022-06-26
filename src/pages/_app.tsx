@@ -20,7 +20,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   // Method to send to GA screen changes
   const handleRouteChange = useCallback((url: string) => {
-    window.gtag("config", `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`, {
+    (window as any).gtag("config", `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`, {
       page_path: url,
     });
   }, []);

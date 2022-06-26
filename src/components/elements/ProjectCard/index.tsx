@@ -87,7 +87,7 @@ const Index: FC<Props> = ({
       <a
         className='project__card'
         rel='noreferrer noopener'
-        target={`${link !== undefined && "_blank"}`}
+        target={`${link !== undefined ? "_blank" : ""}`}
       >
         <div className='card__header'>
           <h3>{name}</h3>
