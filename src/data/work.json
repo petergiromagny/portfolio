@@ -1,5 +1,16 @@
 [
   {
+    "name": "Graneet",
+    "location": "Paris, France",
+    "date": "January 2022 to August 2022",
+    "text": [
+      "Graneet is a startup offering a SaaS in the construction sector. My role was to imagine, design the technical part and implement the new features of the application. Technologies used were :",
+      "ReactJs, Chakra-UI, NestJS, TypeORM, PostgreSQL, Gitlab with CI/CD"
+    ],
+    "url": "https://www.graneet.fr",
+    "urlName": "Constructor sector SaaS"
+  },
+  {
     "name": "La Ligne Web",
     "location": "Aix-en-Provence, France",
     "date": "September 2020 to January 2021",
