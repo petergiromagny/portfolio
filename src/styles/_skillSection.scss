@@ -7,25 +7,27 @@
   }
 
   .skill__body {
+    width: 75%;
+    margin: auto;
+
     .skill__col {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 
       &:nth-last-child(n + 2) {
         margin-bottom: 3rem;
       }
 
-      & > span {
-        margin: 0 2rem !important;
-        @include respond-to(handhelds) {
-          margin: 10px !important;
-        }
-      }
-
       @include respond-to(handhelds) {
         flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
       }
+    }
+
+    @include respond-to(handhelds) {
+      width: 100%;
     }
   }
 }
