@@ -3,7 +3,10 @@ name: Build App Actions
 run-name: Build App Actions 🚀
 runs-on: ubuntu-latest
 
-on: [push]
+on:
+  pull_request:
+    types:
+      - opened
 
 jobs:
   clean:
@@ -33,7 +36,7 @@ jobs:
     name: Build App
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
