@@ -2,13 +2,7 @@ name: Build App Actions
 
 run-name: Build App Actions 🚀
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - opened
+on: push
 
 jobs:
   build:
