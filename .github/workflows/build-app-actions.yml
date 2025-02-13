@@ -1,15 +1,19 @@
 name: Build App Actions
 
 run-name: Build App Actions 🚀
-runs-on: ubuntu-latest
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types:
       - opened
 
 jobs:
   clean:
+    runs-on: ubuntu-latest
+
     name: Prettier & ESLint
     steps:
       - name: Checkout
@@ -33,6 +37,8 @@ jobs:
         uses: yarn lint
 
   build:
+    runs-on: ubuntu-latest
+
     name: Build App
     steps:
       - name: Checkout
