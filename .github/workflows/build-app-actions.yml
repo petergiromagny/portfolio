@@ -30,8 +30,10 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Lint code
-        uses: yarn lint
+      - name: Run linters 🎨
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
 
-      - name: Build
+      - name: Run build 🏗️
         run: yarn build
