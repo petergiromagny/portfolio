@@ -12,20 +12,13 @@ const Launch: FC = () => {
           </div>
           <div className='text__body'>
             <p>
-              I&apos;m student in my last year computer engineering school and
-              I&apos;m freelancer on my own time. This is my online
-              presentation, to introduce my experiences, my top skills and some
-              of my projects.
+              I&apos;m a freelance Fullstack TypeScript engineer specializing in web and mobile application development. With 4 years of experience, I focus on building scalable, high-performance applications using modern technologies like React, Next.js, and NestJS.
             </p>
             <p>
-              During all my studies and some personnal projects I learned
-              several programming languages. I&apos;m specializing in full stack
-              development of web and mobile applications
+              Throughout my career, I have worked on diverse projects, from SaaS platforms to fintech applications, always applying best practices in software architecture, security, and optimization. Passionate about continuous learning, I stay up-to-date with the latest advancements to deliver innovative and efficient solutions.
             </p>
             <p>
-              The development of applications is a passion for me, you&apos;re
-              always learning some new things, some new ways to do, whether
-              you&apos;re alone or in a team.
+              This website showcases my experience, key skills, and selected projects. Feel free to explore and reach out for potential collaborations.
             </p>
           </div>
           <div className='text__footer'>
