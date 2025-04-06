@@ -2,7 +2,7 @@ name: Build App 🚀
 
 run-name: Build App 🚀
 
-on: push
+on: [pull_request]
 
 jobs:
   build:
@@ -20,6 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
+
+      - name: Run Prettier 🎨
+        run: yarn format
 
       - name: Run Linter 🧹
         run: yarn lint
