@@ -24,7 +24,6 @@ jobs:
       - name: Run Prettier 🎨
         run: yarn format
 
-
       - name: Run Linter 🧹
         run: yarn lint
 
