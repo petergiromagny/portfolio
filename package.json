@@ -16,7 +16,7 @@
     "sass": "^1.42.1"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.10",
+    "@types/gtag.js": "^0.0.20",
     "@types/node": "^22.13.4",
     "@types/react": "17.0.22",
     "eslint": "7.32.0",
