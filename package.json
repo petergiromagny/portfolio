@@ -20,7 +20,7 @@
     "@types/node": "^22.13.4",
     "@types/react": "17.0.85",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
+    "eslint-config-next": "11.1.4",
     "prettier": "^3.5.3",
     "typescript": "5.7.3"
   }
