@@ -1,6 +1,6 @@
-import React, { FC } from "react"
+import { ReactNode } from "react"
 
-const Index: FC = (props) => {
+const Index = (props: { children: ReactNode }) => {
   return <main className='body__container'>{props.children}</main>
 }
 

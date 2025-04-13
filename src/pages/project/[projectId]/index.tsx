@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
-import React, { FC } from "react"
+import { FC } from "react"
 
 // Import data
 import Tag from "components/elements/Tag"
@@ -59,7 +59,12 @@ const Index: FC = () => {
             return <p key={index}>{item}</p>
           })}
           <div className='project__image'>
-            <Image src={`/svg/previews/${image}`} alt={currentProject.name} width={800} height={400} />
+            <Image
+              src={`/svg/previews/${image}`}
+              alt={currentProject.name ?? "Project screen"}
+              width={800}
+              height={400}
+            />
           </div>
         </div>
       </div>
