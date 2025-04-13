@@ -1,14 +1,15 @@
-import React, { useCallback } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"
+import React, { useCallback } from "react"
+
 // Import components
-import Button from "components/elements/Button";
+import Button from "components/elements/Button"
 
 const Error500: React.FC = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleGoBack = useCallback(() => {
-      router.back();
-  }, [router]);
+    router.back()
+  }, [router])
 
   return (
     <div className='error__container'>
@@ -20,7 +21,7 @@ const Error500: React.FC = () => {
       </div>
       <Button text='Go Back' onClick={handleGoBack} />
     </div>
-  );
-};
+  )
+}
 
-export default Error500;
+export default Error500

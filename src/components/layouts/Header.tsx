@@ -1,61 +1,52 @@
-import React from "react";
-import Script from 'next/script';
-import Head from "next/head";
+import Head from "next/head"
+import Script from "next/script"
+import React from "react"
 
 const Index = () => {
   return (
     <>
-        <Head>
-          <title>Peter&apos;s Portfolio</title>
-          <meta
-            name='title'
-            content="Peter's Portfolio — All you want to know about me"
-          />
-          <meta
-            name='description'
-            content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
-          />
-          <meta property='og:type' content='website' />
-          <meta property='og:url' content='https://metatags.io/' />
-          <meta
-            property='og:title'
-            content="Peter's Portfolio — All you want to know about me"
-          />
-          <meta
-            property='og:description'
-            content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
-          />
-          <meta
-            property='og:image'
-            content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
-          />
-          <meta property='twitter:card' content='summary_large_image' />
-          <meta property='twitter:url' content='https://metatags.io/' />
-          <meta
-            property='twitter:title'
-            content="Peter's Portfolio — All you want to know about me"
-          />
-          <meta
-            property='twitter:description'
-            content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
-          />
-          <meta
-            property='twitter:image'
-            content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
-          />
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <Script
-          id="gtag"
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      <Head>
+        <title>Peter&apos;s Portfolio</title>
+        <meta name='title' content="Peter's Portfolio — All you want to know about me" />
+        <meta
+          name='description'
+          content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
         />
-        <Script
-          id="gtag-tracker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-              __html: `
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://metatags.io/' />
+        <meta property='og:title' content="Peter's Portfolio — All you want to know about me" />
+        <meta
+          property='og:description'
+          content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
+        />
+        <meta
+          property='og:image'
+          content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
+        />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://metatags.io/' />
+        <meta property='twitter:title' content="Peter's Portfolio — All you want to know about me" />
+        <meta
+          property='twitter:description'
+          content='Let me introduce myself with my experiences, my skills and all the projects already accomplished'
+        />
+        <meta
+          property='twitter:image'
+          content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
+        />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        id='gtag'
+        strategy='afterInteractive'
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        id='gtag-tracker'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -63,10 +54,10 @@ const Index = () => {
                   page_path: window.location.pathname,
                 });
               `,
-          }}
-        />
+        }}
+      />
     </>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

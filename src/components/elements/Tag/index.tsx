@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 interface Props {
-  text: string;
+  text: string
 }
 
 const Index: FC<Props> = ({ text }) => {
@@ -9,7 +9,7 @@ const Index: FC<Props> = ({ text }) => {
     <div className='tag__content'>
       <p>{text}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

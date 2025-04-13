@@ -1,14 +1,16 @@
-import React, { FC, useMemo } from "react";
-import ProjectCard from "components/elements/ProjectCard";
+import Link from "next/link"
+import { FC, useMemo } from "react"
+
+import ProjectCard from "components/elements/ProjectCard"
 // Import data
-import projects from "../../data/project.json";
+import type { IProject } from "types/project"
+
+import projects from "../../data/project.json"
 // Import type
-import type { IProject } from "types/project";
-import Link from "next/link";
 
 const Project: FC = () => {
   // Get last three projects
-  const lastProjects = useMemo<IProject[]>(() => projects.slice(-3).reverse(), []);
+  const lastProjects = useMemo<IProject[]>(() => projects.slice(-3).reverse(), [])
 
   return (
     <div id='project'>
@@ -32,14 +34,14 @@ const Project: FC = () => {
           ))}
           <div className='project__card project__card--more'>
             <span>Don&apos;t keep the suspense alive</span>
-            <Link href='/project'>
-              <a className='button'>See more</a>
+            <Link href='/project' className='button'>
+              See more
             </Link>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

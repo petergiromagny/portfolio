@@ -1,26 +1,25 @@
-import { useMemo } from "react";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-// Import data
-import projects from "data/project.json";
-// Import type
-import type { IProject } from "types/project";
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import { useMemo } from "react"
 
-const ProjectCardDynamic = dynamic(
-  () => import("components/elements/ProjectCard")
-);
+// Import data
+import projects from "data/project.json"
+// Import type
+import type { IProject } from "types/project"
+
+const ProjectCardDynamic = dynamic(() => import("components/elements/ProjectCard"))
 
 const Index = () => {
   const lastProjects = useMemo<IProject[]>(() => {
-    let projectsReversed: IProject[] = [];
+    const projectsReversed: IProject[] = []
     for (let index = projects.length; 0 <= index; index--) {
-      console.log('Array sorted')
+      console.log("Array sorted")
       if (projects[index] !== undefined) {
-        projectsReversed.push(projects[index]);
+        projectsReversed.push(projects[index])
       }
     }
-    return projectsReversed;
-  }, []);
+    return projectsReversed
+  }, [])
 
   return (
     <div id='project__content'>
@@ -29,8 +28,8 @@ const Index = () => {
       </div>
       <div className='container'>
         <div className='back__home container'>
-          <Link href='/'>
-            <a className='button__back'>{`< Back to home`}</a>
+          <Link href='/' className='button__back'>
+            {`< Back to home`}
           </Link>
         </div>
         <div className='project__body'>
@@ -49,7 +48,7 @@ const Index = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

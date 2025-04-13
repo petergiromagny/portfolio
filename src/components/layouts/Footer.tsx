@@ -1,6 +1,8 @@
-import React, { FC } from "react";
+import Link from "next/link"
+import { FC } from "react"
+
 // Import components
-import Navbar from "./Navbar";
+import Navbar from "./Navbar"
 
 const Index: FC = () => {
   return (
@@ -11,18 +13,15 @@ const Index: FC = () => {
           <h2>Let&apos;s Work Together</h2>
         </div>
         <div className='footer__body'>
-          <p>
-            If you have a website or mobile app idea in mind, feel free to
-            contact me.
-          </p>
-          <a href='mailto:peter.giromagny@viacesi.fr' className='button'>
+          <p>If you have a website or mobile app idea in mind, feel free to contact me.</p>
+          <Link href='mailto:peter.giromagny@viacesi.fr' className='button'>
             Say Hello!
-          </a>
+          </Link>
           <Navbar isFooter />
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
