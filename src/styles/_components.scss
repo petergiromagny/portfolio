@@ -70,8 +70,7 @@
       &:hover {
         .arrow__image {
           animation: arrow__on ease-in 0.2s;
-          filter: invert(20%) sepia(73%) saturate(6322%) hue-rotate(345deg)
-            brightness(101%) contrast(87%);
+          filter: invert(20%) sepia(73%) saturate(6322%) hue-rotate(345deg) brightness(101%) contrast(87%);
         }
       }
 

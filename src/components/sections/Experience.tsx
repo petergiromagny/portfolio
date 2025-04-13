@@ -1,9 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
+
 // Import components
-import ExperienceCard from "components/elements/ExperienceCard";
+import ExperienceCard from "components/elements/ExperienceCard"
 // Import data
-import work from "data/work.json";
-import education from "data/education.json";
+import education from "data/education.json"
+import work from "data/work.json"
 
 const Experience: FC = () => {
   return (
@@ -45,7 +46,7 @@ const Experience: FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

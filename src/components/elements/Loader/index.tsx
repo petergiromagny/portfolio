@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 const Index: FC = () => {
   return (
@@ -7,7 +7,7 @@ const Index: FC = () => {
       <span className='loader__opacity loader__opacity--mid'></span>
       <span className='loader__opacity loader__opacity--low'></span>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

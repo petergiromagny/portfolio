@@ -1,34 +1,27 @@
-import React, { FC } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
+import { FC } from "react"
+
 // Import components
-import Tag from "../Tag";
+import Tag from "../Tag"
 
 interface Props {
-  id: number;
-  name: string;
-  intro: string;
-  image: string;
-  link?: string;
-  tags: string[];
-  isHorizontal: boolean;
+  id: number
+  name: string
+  intro: string
+  image: string
+  link?: string
+  tags: string[]
+  isHorizontal: boolean
 }
 
-const Index: FC<Props> = ({
-  id,
-  name,
-  intro,
-  image,
-  link,
-  tags = [],
-  isHorizontal = false,
-}) => {
-  let linkWebsite: string;
+const Index: FC<Props> = ({ id, name, intro, image, link, tags = [], isHorizontal = false }) => {
+  let linkWebsite: string
 
   if (link === undefined) {
-    linkWebsite = `/project/${id}`;
+    linkWebsite = `/project/${id}`
   } else {
-    linkWebsite = link;
+    linkWebsite = link
   }
 
   // Card for project page
@@ -42,39 +35,28 @@ const Index: FC<Props> = ({
               <p>{intro}</p>
               <div className='project__tags'>
                 {tags.map((item, index) => {
-                  return <Tag text={item} key={index} />;
+                  return <Tag text={item} key={index} />
                 })}
               </div>
             </div>
             {link !== undefined ? (
-              <a
-                className='button'
-                href={linkWebsite}
-                rel='noreferrer noopener'
-                target='_blank'
-              >
+              <Link className='button' href={linkWebsite} rel='noreferrer noopener' target='_blank'>
                 Visit website
-              </a>
+              </Link>
             ) : (
-              <Link href={linkWebsite}>
-                <a className='button'>See more</a>
+              <Link href={linkWebsite} className='button'>
+                See more
               </Link>
             )}
           </div>
           <div className='col__2'>
             <div className='preview'>
-              <Image
-                src={`/svg/previews/${image}`}
-                alt={name}
-                width={400}
-                height={250}
-                priority
-              />
+              <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} priority />
             </div>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -83,32 +65,23 @@ const Index: FC<Props> = ({
         pathname: linkWebsite,
         query: { fromHome: true },
       }}
+      className='project__card'
+      rel='noreferrer noopener'
+      target={`${link !== undefined ? "_blank" : ""}`}
     >
-      <a
-        className='project__card'
-        rel='noreferrer noopener'
-        target={`${link !== undefined ? "_blank" : ""}`}
-      >
-        <div className='card__header'>
-          <h3>{name}</h3>
+      <div className='card__header'>
+        <h3>{name}</h3>
+      </div>
+      <div className='card__body'>
+        <div className='text'>
+          <p>{intro}</p>
         </div>
-        <div className='card__body'>
-          <div className='text'>
-            <p>{intro}</p>
-          </div>
-          <div className='preview'>
-            <Image
-              src={`/svg/previews/${image}`}
-              alt={name}
-              width={400}
-              height={250}
-              priority
-            />
-          </div>
+        <div className='preview'>
+          <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} priority />
         </div>
-      </a>
+      </div>
     </Link>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

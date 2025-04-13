@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import { ReactNode } from "react"
 
-const Index: FC = (props) => {
-  return <main className='body__container'>{props.children}</main>;
-};
+const Index = (props: { children: ReactNode }) => {
+  return <main className='body__container'>{props.children}</main>
+}
 
-export default Index;
+export default Index
