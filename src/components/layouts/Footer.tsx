@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { FC } from "react"
 
-// Import components
-import Navbar from "./Navbar"
+import { LINKS } from "@/constants/links.constant"
 
-const Index: FC = () => {
+import { FooterNavbar } from "./FooterNavbar"
+
+export function Footer() {
   return (
     <footer id='footer__content'>
       <div className='container'>
@@ -14,14 +14,14 @@ const Index: FC = () => {
         </div>
         <div className='footer__body'>
           <p>If you have a website or mobile app idea in mind, feel free to contact me.</p>
-          <Link href='mailto:peter.giromagny@viacesi.fr' className='button'>
+
+          <Link href={LINKS.MAIL} className='button'>
             Say Hello!
           </Link>
-          <Navbar isFooter />
+
+          <FooterNavbar />
         </div>
       </div>
     </footer>
   )
 }
-
-export default Index

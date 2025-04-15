@@ -5,5 +5,5 @@ export interface IProject {
   image: string
   link?: string
   tags: string[]
-  details: string[] | []
+  details: string[]
 }

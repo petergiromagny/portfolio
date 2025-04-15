@@ -1,55 +1,23 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { FC } from "react"
+import { useCallback, useState } from "react"
 
-interface Props {
-  isOpen?: boolean
-  handleHamburgerAction?: () => void
-  isFooter?: boolean
-}
+import { LINKS } from "@/constants/links.constant"
+import { ROUTES } from "@/constants/routes.constant"
 
-const Index: FC<Props> = ({ isOpen, handleHamburgerAction = () => {}, isFooter = false }) => {
-  if (isFooter) {
-    return (
-      <div className='navbar__container navbar__container--footer container'>
-        <div className='col__2 col__network'>
-          <Link
-            href='https://github.com/petergiromagny'
-            rel='noopener noreferrer'
-            className='network__github'
-            target='_blank'
-          >
-            <Image src='/svg/social-network/github.svg' alt='Github Link' width={25} height={25} />
-          </Link>
-          <Link
-            href='https://www.linkedin.com/in/peter-giromagny-0b479a171/'
-            rel='noopener noreferrer'
-            className='network__linkedin'
-            target='_blank'
-          >
-            <Image src='/svg/social-network/linkedin.svg' alt='Linkedin Link' width={25} height={25} />
-          </Link>
-        </div>
-        <div className='col__2 col__nav'>
-          <div className='navbar__list'>
-            <Link href='/#experience' className='navbar__link'>
-              About
-            </Link>
-            <Link href='/#skill' className='navbar__link'>
-              Skills
-            </Link>
-            <Link href='/#project' className='navbar__link'>
-              Projects
-            </Link>
-          </div>
-        </div>
-      </div>
-    )
-  }
+export function Navbar() {
+  const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false)
+
+  const handleHamburgerAction = useCallback(() => {
+    setHamburgerOpen(!hamburgerOpen)
+  }, [hamburgerOpen, setHamburgerOpen])
+
   return (
     <div className='navbar__container container'>
       <div
-        className={`navbar__hamburger ${isOpen ? "navbar__hamburger--opened" : "navbar__hamburger--closed"}`}
+        className={`navbar__hamburger ${hamburgerOpen ? "navbar__hamburger--opened" : "navbar__hamburger--closed"}`}
         onClick={() => handleHamburgerAction()}
         aria-hidden='true'
       >
@@ -57,10 +25,11 @@ const Index: FC<Props> = ({ isOpen, handleHamburgerAction = () => {}, isFooter =
         <span className='hamburger__line hamburger__line--middle'></span>
         <span className='hamburger__line hamburger__line--bottom'></span>
       </div>
-      <div className={`navbar__status ${isOpen ? "navbar__status--opened" : "navbar__status--closed"}`}>
+
+      <div className={`navbar__status ${hamburgerOpen ? "navbar__status--opened" : "navbar__status--closed"}`}>
         <div className='col__2 col__network'>
           <Link
-            href='https://github.com/petergiromagny'
+            href={LINKS.GITHUB}
             rel='noopener noreferrer'
             className='network__github'
             target='_blank'
@@ -68,8 +37,9 @@ const Index: FC<Props> = ({ isOpen, handleHamburgerAction = () => {}, isFooter =
           >
             <Image src='/svg/social-network/github.svg' alt='Github Link' width={25} height={25} />
           </Link>
+
           <Link
-            href='https://www.linkedin.com/in/peter-giromagny-0b479a171/'
+            href={LINKS.LINKEDIN}
             rel='noopener noreferrer'
             className='network__linkedin'
             target='_blank'
@@ -78,18 +48,22 @@ const Index: FC<Props> = ({ isOpen, handleHamburgerAction = () => {}, isFooter =
             <Image src='/svg/social-network/linkedin.svg' alt='Linkedin Link' width={25} height={25} />
           </Link>
         </div>
+
         <div className='col__2 col__nav'>
           <div className='navbar__list'>
-            <Link href='#experience' className='navbar__link' onClick={() => handleHamburgerAction()}>
+            <Link href={ROUTES.EXPERIENCE} className='navbar__link' onClick={() => handleHamburgerAction()}>
               About
             </Link>
-            <Link href='#skill' className='navbar__link' onClick={() => handleHamburgerAction()}>
+
+            <Link href={ROUTES.SKILLS} className='navbar__link' onClick={() => handleHamburgerAction()}>
               Skills
             </Link>
-            <Link href='#project' className='navbar__link' onClick={() => handleHamburgerAction()}>
+
+            <Link href={ROUTES.PROJECT} className='navbar__link' onClick={() => handleHamburgerAction()}>
               Projects
             </Link>
-            <Link href='mailto:peter.giromagny@viacesi.fr' className='button' onClick={() => handleHamburgerAction()}>
+
+            <Link href={LINKS.MAIL} className='button' onClick={() => handleHamburgerAction()}>
               Contact me
             </Link>
           </div>
@@ -98,5 +72,3 @@ const Index: FC<Props> = ({ isOpen, handleHamburgerAction = () => {}, isFooter =
     </div>
   )
 }
-
-export default Index
