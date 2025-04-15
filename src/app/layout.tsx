@@ -1,7 +1,6 @@
-import { GoogleAnalytics } from "@next/third-parties/google"
 import { ReactNode } from "react"
 
-import { Footer, Navbar } from "@/components/layouts"
+import { Footer, GATag, Navbar } from "@/components/layouts"
 import { ScrollTopButton } from "@/components/shared"
 import "@/styles/globals.scss"
 
@@ -28,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </div>
       </body>
 
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!} />
+      <GATag />
     </html>
   )
 }
