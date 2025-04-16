@@ -33,17 +33,17 @@ export function Launch() {
           </div>
 
           <div className='text__footer'>
-            <div className='cv-download'>
+            <div className='text__download'>
               <p>Download my CV:</p>
-              <div className='cv-buttons'>
-                <Link href={LINKS.CV_FR} rel='noopener noreferrer' target='_blank' className='cv-button'>
-                  <span className='flag'>🇫🇷</span>
-                  <span className='label'>French Version</span>
+              <div className='text__buttons'>
+                <Link href={LINKS.CV_FR} rel='noopener noreferrer' target='_blank' className='button'>
+                  <span className='text__button--flag'>🇫🇷</span>
+                  <span className='text__button--label'>French Version</span>
                 </Link>
 
-                <Link href={LINKS.CV_EN} rel='noopener noreferrer' target='_blank' className='cv-button'>
-                  <span className='flag'>🇬🇧</span>
-                  <span className='label'>English Version</span>
+                <Link href={LINKS.CV_EN} rel='noopener noreferrer' target='_blank' className='button'>
+                  <span className='text__button--flag'>🇬🇧</span>
+                  <span className='text__button--label'>English Version</span>
                 </Link>
               </div>
             </div>
@@ -59,32 +59,33 @@ export function Launch() {
           <div className='desktop__content'>
             <Image src='/svg/avatar.svg' alt="Peter's avatar" width={175} height={175} priority />
             <div className='avatar__shape avatar__shape--triangle'>
-              <Image src='/svg/triangle.svg' alt='triangle shape' width={175} height={175} priority />
+              <Image src='/svg/triangle.svg' alt='triangle shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--half-donut'>
-              <Image src='/svg/half-donut.svg' alt='half donut shape' width={140} height={140} priority />
+              <Image src='/svg/half-donut.svg' alt='half donut shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--donut'>
-              <Image src='/svg/donut.svg' alt='donut shape' width={120} height={120} priority />
+              <Image src='/svg/donut.svg' alt='donut shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--plus'>
-              <Image src='/svg/plus.svg' alt='plus shape' width={175} height={175} priority />
+              <Image src='/svg/plus.svg' alt='plus shape' fill priority />
             </div>
           </div>
 
           <div className='mobile__content'>
-            <Image src='/svg/avatar.svg' alt="Peter's avatar" width={125} height={125} priority />
+            <Image src='/svg/avatar.svg' alt="Peter's avatar" width={150} height={150} priority />
+
             <div className='avatar__shape avatar__shape--triangle'>
-              <Image src='/svg/triangle.svg' alt='triangle shape' width={175} height={175} priority />
+              <Image src='/svg/triangle.svg' alt='triangle shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--half-donut'>
-              <Image src='/svg/half-donut.svg' alt='half donut shape' width={140} height={140} priority />
+              <Image src='/svg/half-donut.svg' alt='half donut shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--donut'>
-              <Image src='/svg/donut.svg' alt='donut shape' width={120} height={120} priority />
+              <Image src='/svg/donut.svg' alt='donut shape' fill priority />
             </div>
             <div className='avatar__shape avatar__shape--plus'>
-              <Image src='/svg/plus.svg' alt='plus shape' width={175} height={175} priority />
+              <Image src='/svg/plus.svg' alt='plus shape' fill priority />
             </div>
           </div>
         </div>
