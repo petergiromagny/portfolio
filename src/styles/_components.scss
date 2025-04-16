@@ -1,3 +1,7 @@
+@use 'colors' as *;
+@use 'screen' as *;
+@use 'mixins' as *;
+
 @keyframes arrow__on {
   from {
     filter: invert(0) sepia(0) saturate(0) hue-rotate(0);
@@ -37,17 +41,6 @@
   to {
     width: 7%;
   }
-}
-
-.button {
-  @include button-text;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: $red;
-  transition: all 0.15s linear;
-
-  @include button-action;
 }
 
 .experience__card {

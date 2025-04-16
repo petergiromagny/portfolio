@@ -21,7 +21,7 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       sass:
-        specifier: ^1.42.1
+        specifier: ^1.86.3
         version: 1.86.3
     devDependencies:
       '@eslint/compat':

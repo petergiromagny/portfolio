@@ -32,7 +32,7 @@ export function ProjectDetailCard({ id, name, intro, image, link, tags = [] }: I
         </div>
         <div className='col__2'>
           <div className='preview'>
-            <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} priority />
+            <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} />
           </div>
         </div>
       </div>

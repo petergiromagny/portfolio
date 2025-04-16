@@ -16,7 +16,7 @@ export function ProjectPreviewCard({ id, name, intro, image, link }: IProject) {
           <p>{intro}</p>
         </div>
         <div className='preview'>
-          <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} priority />
+          <Image src={`/svg/previews/${image}`} alt={name} width={400} height={250} />
         </div>
       </div>
     </Link>
