@@ -15,19 +15,14 @@ jobs:
         with:
           node-version: "22.x"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Run Prettier 🎨
-        run: pnpm format
+        run: yarn format
 
       - name: Run Linter 🧹
-        run: pnpm lint
+        run: yarn lint
 
       - name: Run build 🏗️
-        run: pnpm build
+        run: yarn build
